@@ -1,4 +1,5 @@
 
+#gonna analyze 
 nums = [-1,-1,-1,-1,-1,0]
 S = sum(nums)
 leftsum = 0
