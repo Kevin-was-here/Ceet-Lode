@@ -19,3 +19,15 @@ class Solution:
             second = temp
         
         return [first,second]
+
+#better solution
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dic = {}
+        
+        for first, val in enumerate(nums):
+            secondval = target - val
+            if secondval in dic:
+                return(dic[secondval], first)
+            else:
+                dic[val] = first
