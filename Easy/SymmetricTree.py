@@ -22,6 +22,9 @@ Constraints:
 """
 
 # Definition for a binary tree node.
+from turtle import right
+
+
 class TreeNode:
   def __init__(self, val=0, left=None, right=None):
     self.val = val
@@ -30,7 +33,13 @@ class TreeNode:
 
 class Solution:
   def isSymmetric(self, root) -> bool:
-    x = 1
+    def isSym(L,R):
+        if not L and not R: return True
+        if L and R and L.val == R.val: 
+            return isSym(L.left, R.right) and isSym(L.right, R.left)
+        return False
+    return isSym(root, root)
+      
 
 def main():
   root = TreeNode(0,None,3)
