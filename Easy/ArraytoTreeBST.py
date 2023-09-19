@@ -23,8 +23,14 @@ Constraints:
     -104 <= nums[i] <= 104
     nums is sorted in a strictly increasing order.
 """
+
+#not real imports, the code having an error bothers me
+from typing import Optional
+from Easy.SymmetricTree import TreeNode
+
+
 class Solution:
-    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
+    def sortedArrayToBST(self, nums) -> Optional[TreeNode]:
         if not nums:
           return None
         
